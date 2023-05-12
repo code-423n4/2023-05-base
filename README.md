@@ -12,7 +12,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ---
 
-# Contest setup
+# Audit setup
 
 ## 🐺 C4: Set up repos
 - [ ] Create a new private repo named `YYYY-MM-sponsorname` using this repo as a template.
