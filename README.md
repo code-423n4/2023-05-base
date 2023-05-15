@@ -15,9 +15,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 # Audit setup
 
 ## 🐺 C4: Set up repos
-- [ ] Create a new private repo named `YYYY-MM-sponsorname` using this repo as a template.
-- [ ] Rename this repo to reflect contest date (if applicable)
-- [ ] Rename contest H1 below
 - [ ] Update pot sizes
 - [ ] Fill in start and end times in contest bullets below
 - [ ] Add link to submission form in contest details below
