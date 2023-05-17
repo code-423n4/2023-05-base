@@ -1,0 +1,6 @@
+[submodule "optimism"]
+	path = optimism
+	url = https://github.com/ethereum-optimism/optimism
+[submodule "op-geth"]
+	path = op-geth
+	url = https://github.com/ethereum-optimism/op-geth
