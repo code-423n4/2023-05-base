@@ -16,12 +16,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 
 ## 🐺 C4: Set up repos
 - [ ] Update pot sizes
-- [ ] Fill in start and end times in contest bullets below
-- [ ] Add link to submission form in contest details below
 - [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
-- [ ] Add matching info to the [code423n4.com public contest data here](https://github.com/code-423n4/code423n4.com/blob/main/_data/contests/contests.csv))
-- [ ] Add sponsor to this private repo with 'maintain' level access.
-- [ ] Send the sponsor contact the url for this repo to follow the instructions below and add contracts here. 
 - [ ] Delete this checklist.
 
 # Repo setup
@@ -68,10 +63,10 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
   - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
   - (this line can be removed if there is no mitigation) Mitigation review contest: XXX XXX USDC (*Opportunity goes to top 3 certified wardens based on placement in this contest.*)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-sponsorName-contest/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-05-base-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts May 19, 2023 20:00 UTC
-- Ends May XX, 2023 20:00 UTC
+- Ends Jun 02, 2023 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
