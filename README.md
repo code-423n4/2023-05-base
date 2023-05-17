@@ -19,39 +19,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 - [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
 - [ ] Delete this checklist.
 
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [ ] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
-
----
-
-## ⭐️ Sponsor: Edit this README
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [ ] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-  - [ ] When linking, please provide all links as full absolute links versus relative links
-  - [ ] All information should be provided in markdown format (HTML does not render on Code4rena.com)
-- [ ] Under the "Scope" heading, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [ ] Describe anything else that adds any special logic that makes your approach unique
-- [ ] Identify any areas of specific concern in reviewing the code
-- [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] See also: [this checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746)
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
 
 # Base audit details
 - Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
@@ -78,54 +45,85 @@ Automated findings output for the contest can be found [here](add link to report
 
 # Overview
 
-*Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
+Base is a secure, low-cost, developer-friendly Ethereum L2 built to bring the next billion users to web3.
+It is built on the MIT-licensed OP Stack, in collaboration with Optimism. Coinbase is joining as the second Core Dev team working on the OP Stack to ensure it’s a public good available to everyone.
+
+
 
 # Scope
+We are basing this contest on [`OP-monorepo`](https://github.com/ethereum-optimism/optimism/commit/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59)  and [`op-geth`](https://github.com/ethereum-optimism/op-geth/commit/3fa9e812447af947c0208838453268a8ea33444b) 
+These commit hashes will be considered as a code freeze for the purposes of this contest.
 
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
+You can see these contracts deployed on testnet here : https://docs.base.org/network-information
 
-*For line of code counts, we recommend using [cloc](https://github.com/AlDanial/cloc).* 
+## Contracts Overview
 
-| Contract | SLOC | Purpose | Libraries used |  
-| ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+### Contracts deployed to L1
+
+
+| Name                                                                                     | Proxy Type                                                              | Description                                                                                         |
+| ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [`L1CrossDomainMessenger`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/messengers.md)                                    | [`ResolvedDelegateProxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/legacy/ResolvedDelegateProxy.sol) | High-level interface for sending messages to and receiving messages from Optimism                   |
+| [`L1StandardBridge`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/bridges.md)                                             | [`L1ChugSplashProxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/legacy/L1ChugSplashProxy.sol)         | Standardized system for transfering ERC20 tokens to/from Optimism                                   |
+| [`L2OutputOracle`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/proposals.md#l2-output-oracle-smart-contract)             | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Stores commitments to the state of Optimism which can be used by contracts on L1 to access L2 state |
+| [`OptimismPortal`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/deposits.md#deposit-contract)                             | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Low-level message passing interface                                                                 |
+| [`OptimismMintableERC20Factory`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/predeploys.md#optimismmintableerc20factory) | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Deploys standard `OptimismMintableERC20` tokens that are compatible with either `StandardBridge`    |
+| [`ProxyAdmin`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/TODO)                                                         | -                                                                       | Contract that can upgrade L1 contracts                                                              |
+
+### Contracts deployed to L2
+
+| Name                                                                                     | Proxy Type                                 | Description                                                                                      |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| [`GasPriceOracle`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/predeploys.md#ovm_gaspriceoracle)                         | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Stores L2 gas price configuration values                                                         |
+| [`L1Block`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/predeploys.md#l1block)                                           | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Stores L1 block context information (e.g., latest known L1 block hash)                           |
+| [`L2CrossDomainMessenger`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/predeploys.md#l2crossdomainmessenger)             | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | High-level interface for sending messages to and receiving messages from L1                      |
+| [`L2StandardBridge`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/predeploys.md#l2standardbridge)                         | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Standardized system for transferring ERC20 tokens to/from L1                                     |
+| [`L2ToL1MessagePasser`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/predeploys.md#ovm_l2tol1messagepasser)               | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Low-level message passing interface                                                              |
+| [`SequencerFeeVault`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/predeploys.md#sequencerfeevault)                       | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Vault for L2 transaction fees                                                                    |
+| [`OptimismMintableERC20Factory`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/predeploys.md#optimismmintableerc20factory) | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Deploys standard `OptimismMintableERC20` tokens that are compatible with either `StandardBridge` |
+| [`L2ProxyAdmin`](https://github.com/ethereum-optimism/optimism/tree/develop/specs/TODO)                                                       | -                                          | Contract that can upgrade L2 contracts when sent a transaction from L1                           |
 
 ## Out of scope
 
-*List any files/contracts that are out of scope for this audit.*
+### Legacy and deprecated contracts
+
+| Name                                                            | Location | Proxy Type                                 | Description                                                                           |
+| --------------------------------------------------------------- | -------- | ------------------------------------------ | ------------------------------------------------------------------------------------- |
+| [`AddressManager`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/legacy/AddressManager.sol)       | L1       | -                                          | Legacy upgrade mechanism (unused in Bedrock)                                          |
+| [`DeployerWhitelist`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/legacy/DeployerWhitelist.sol) | L2       | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Legacy contract for managing allowed deployers (unused since EVM Equivalence upgrade) |
+| [`L1BlockNumber`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/legacy/L1BlockNumber.sol)         | L2       | [`Proxy`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Legacy contract for accessing latest known L1 block number, replaced by `L1Block`     |
+
+* Legacy code that doesn't affect bedrock.*
 
 # Additional Context
 
-*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
 
-*Sponsor, please confirm/edit the information below.*
 
-## Scoping Details 
-```
-- If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:  
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
-- Please describe required context:   
-- Does it use an oracle?:  
-- Does the token conform to the ERC20 standard?:  
-- Are there any novel or unique curve logic or mathematical models?: 
-- Does it use a timelock function?:  
-- Is it an NFT?: 
-- Does it have an AMM?:   
-- Is it a fork of a popular project?:   
-- Does it use rollups?:   
-- Is it multi-chain?:  
-- Does it use a side-chain?: 
-```
+The key components within the scope of the contest include:
 
-# Tests
+[`L1 Contracts`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/L1)
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
+[`L2 Contracts`](https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock/contracts/L2)
 
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+[`op-node`](https://github.com/ethereum-optimism/optimism/tree/develop/op-node)
+
+[`op-geth`](https://github.com/ethereum-optimism/op-geth)
+
+We encourage participants to look for bugs in the following areas:
+
+Client node vulnerabilities
+EVM equivalence vulnerabilities
+Bridge vulnerabilities
+Generic smart contract issues
+Migration attacks
+Specification errors
+
+
+# Build & Tests
+
+Please refer to the below documentation for building the repo.
+
+https://stack.optimism.io/docs/build/getting-started/
+
+https://github.com/ethereum-optimism/optimism/tree/develop/packages/contracts-bedrock
+
