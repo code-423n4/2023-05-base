@@ -1,11 +1,3 @@
-# Audit setup
-
-## 🐺 C4: Set up repos
-
-- [ ] Update pot sizes
-- [ ] Add the information from the scoping form to the "Scoping Details" section at the bottom of this readme.
-- [ ] Delete this checklist.
-
 # Base audit details
 
 - Total Prize Pool: $100,000 USDC 
