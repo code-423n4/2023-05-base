@@ -8,14 +8,13 @@
 
 # Base audit details
 
-- Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
-  - HM awards: XXX XXX USDC (Notion: HM (main) pool)
-  - QA report awards: XXX XXX USDC (Notion: QA pool)
-  - Gas report awards: XXX XXX USDC (Notion: Gas pool)
-  - Judge awards: XXX XXX USDC (Notion: Judge Fee)
-  - Lookout awards: XXX XXX USDC (Notion: Sum of Pre-sort fee + Pre-sort early bonus)
-  - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
-  - (this line can be removed if there is no mitigation) Mitigation review contest: XXX XXX USDC (*Opportunity goes to top 3 certified wardens based on placement in this contest.*)
+- Total Prize Pool: $100,000 USDC 
+  - HM awards: $74,619 USDC 
+  - QA report awards: $8,291 USDC 
+  - Gas report awards: $0 USDC 
+  - Judge awards: $9,950 USDC 
+  - Lookout awards: $6,640 USDC 
+  - Scout awards: $500 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-05-base-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
