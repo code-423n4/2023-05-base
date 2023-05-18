@@ -13,7 +13,7 @@
 - Starts May 19, 2023 20:00 UTC
 - Ends Jun 02, 2023 20:00 UTC
 
-**IMPORTANT NOTE:** Unlike most public Code4rena contests, prior to receiving payment from this contest you MUST become a [Certified Warden](https://code4rena.com/certified-contributor-application/) (successfully complete KYC). You do not have to complete this process before competing or submitting bugs. You must have started this process within 48 hours after contest close, i.e. **by June 4, 2023 at 20:00 UTC in order to receive payment**.
+**IMPORTANT NOTE:** Unlike most public Code4rena audits, prior to receiving payment from this audit you MUST become a [Certified Warden](https://code4rena.com/certified-contributor-application/)  (successfully complete KYC). You do not have to complete this process before competing or submitting bugs. You must have started this process within 48 hours after the audit ends, i.e. **by June 4, 2023 at 20:00 UTC in order to receive payment.**
 
 # Overview
 
