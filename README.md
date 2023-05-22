@@ -1,3 +1,5 @@
+![Base Logo](https://raw.githubusercontent.com/base-org/node/main/logo.webp)
+
 # Base audit details
 
 - Total Prize Pool: $100,000 USDC 
@@ -17,7 +19,7 @@
 
 # Overview
 
-Base is a secure, low-cost, developer-friendly Ethereum L2 built to bring the next billion users to web3.
+Base is a secure, low-cost, developer-friendly Ethereum L2 built to bring the next billion users on-chain.
 It is built on the MIT-licensed OP Stack, in collaboration with Optimism. Coinbase is joining as the second Core Dev team working on the OP Stack to ensure it’s a public good available to everyone.
 
 # Scope
@@ -34,12 +36,10 @@ The key components within the scope of the contest include:
 
 We encourage participants to look for bugs in the following areas:
 
-- Client node vulnerabilities
+- Node vulnerabilities
 - EVM equivalence vulnerabilities
 - Bridge vulnerabilities
 - Generic smart contract issues
-- Migration attacks
-- Specification errors
 
 ## External repos
 
@@ -55,6 +55,8 @@ You can see these contracts deployed on testnet here : <https://docs.base.org/ne
 
 ### Contracts deployed to L1
 
+
+
 | Name                                                                                     | Proxy Type                                                              | Description                                                                                         |
 | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | [`L1CrossDomainMessenger`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/messengers.md)                                    | [`ResolvedDelegateProxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/legacy/ResolvedDelegateProxy.sol) | High-level interface for sending messages to and receiving messages from Optimism                   |
@@ -62,7 +64,10 @@ You can see these contracts deployed on testnet here : <https://docs.base.org/ne
 | [`L2OutputOracle`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/proposals.md#l2-output-oracle-smart-contract)             | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Stores commitments to the state of Optimism which can be used by contracts on L1 to access L2 state |
 | [`OptimismPortal`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/deposits.md#deposit-contract)                             | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Low-level message passing interface                                                                 |
 | [`OptimismMintableERC20Factory`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/predeploys.md#optimismmintableerc20factory) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Deploys standard `OptimismMintableERC20` tokens that are compatible with either `StandardBridge`    |
+| [`SystemConfig`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts-bedrock/contracts/L1/SystemConfig.sol) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Store system config on L1 and picked up by L2 as part of chain derivation |
+| [`SystemDictator`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts-bedrock/contracts/deployment/SystemDictator.sol) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) |  Helps with deployment of bedrock system. |
 | ProxyAdmin                                                         | -                                                                       | Contract that can upgrade L1 contracts                                                              |
+
 
 ### Contracts deployed to L2
 
@@ -75,7 +80,7 @@ You can see these contracts deployed on testnet here : <https://docs.base.org/ne
 | [`L2ToL1MessagePasser`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/predeploys.md#ovm_l2tol1messagepasser)               | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Low-level message passing interface                                                              |
 | [`SequencerFeeVault`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/predeploys.md#sequencerfeevault)                       | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Vault for L2 transaction fees                                                                    |
 | [`OptimismMintableERC20Factory`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/predeploys.md#optimismmintableerc20factory) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Deploys standard `OptimismMintableERC20` tokens that are compatible with either `StandardBridge` |
-| L2ProxyAdmin                                                       | -                                          | Contract that can upgrade L2 contracts when sent a transaction from L1                           |
+| ProxyAdmin                                                       | -                                          | Contract that can upgrade L2 contracts when sent a transaction from L1                           |
 
 ## Out of scope
 
@@ -88,6 +93,30 @@ You can see these contracts deployed on testnet here : <https://docs.base.org/ne
 | [`L1BlockNumber`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/legacy/L1BlockNumber.sol)         | L2       | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Legacy contract for accessing latest known L1 block number, replaced by `L1Block`     |
 
 - Legacy code that doesn't affect bedrock.*
+
+# Known Issues
+
+*Previously known and documented risks will not be will not be accepted as valid findings.
+
+*There is an edge case in which ETH deposited to the OptimismPortal by a contract can be irrecoverably stranded:
+
+When a deposit transaction fails to execute, the sender's account balance is still credited with the mint value. However, if the deposit's L1 sender is a contract, the tx.origin on L2 will be aliased, and this aliased address will receive the minted on L2. In general the contract on L1 will not be able to recover these funds.We have documented this risk and encourage users to take advantage of our CrossDomainMessenger contracts which provide additional safety measures.
+
+*Deposit grieffing by filling up the MAX_RESOURCE_LIMIT
+
+This issue is mitigated by PR 5064, which does not completely
+resolve the issue but does increase the cost of a sustained grieffing attack.
+A more complete fix will require architectural changes.
+
+*There are various 'foot guns' in the bridge which may arise from misconfiguring a token. Examples include:
+
+Having both (or neither of) the local and remote tokens be OptimismMintable.
+Tokens which dynamically alter the amount of a token held by an account, such as fee-on-transfer and rebasing tokens.
+To minimize complexity our bridge design does not try to prevent all forms of developer and user error.
+
+*When running in non-archive mode op-geth has difficulty executing deep reorgs. We are working on a fix.
+
+
 
 # Build & Tests
 
