@@ -64,8 +64,8 @@ You can see these contracts deployed on testnet here : <https://docs.base.org/ne
 | [`L2OutputOracle`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/proposals.md#l2-output-oracle-smart-contract)             | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Stores commitments to the state of Optimism which can be used by contracts on L1 to access L2 state |
 | [`OptimismPortal`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/deposits.md#deposit-contract)                             | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Low-level message passing interface                                                                 |
 | [`OptimismMintableERC20Factory`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/specs/predeploys.md#optimismmintableerc20factory) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol)                              | Deploys standard `OptimismMintableERC20` tokens that are compatible with either `StandardBridge`    |
-| [`SystemConfig`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts-bedrock/contracts/L1/SystemConfig.sol) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Store system config on L1 and picked up by L2 as part of chain derivation |
-| [`SystemDictator`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts-bedrock/contracts/deployment/SystemDictator.sol) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) |  Helps with deployment of bedrock system. |
+| [`SystemConfig`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/L1/SystemConfig.sol) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) | Store system config on L1 and picked up by L2 as part of chain derivation |
+| [`SystemDictator`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/deployment/SystemDictator.sol) | [`Proxy`](https://github.com/ethereum-optimism/optimism/blob/382d38b7d45bcbf73cb5e1e3f28cbd45d24e8a59/packages/contracts-bedrock/contracts/universal/Proxy.sol) |  Helps with deployment of bedrock system. |
 | ProxyAdmin                                                         | -                                                                       | Contract that can upgrade L1 contracts                                                              |
 
 
@@ -102,10 +102,10 @@ You can see these contracts deployed on testnet here : <https://docs.base.org/ne
 
 When a deposit transaction fails to execute, the sender's account balance is still credited with the mint value. However, if the deposit's L1 sender is a contract, the tx.origin on L2 will be aliased, and this aliased address will receive the minted on L2. In general the contract on L1 will not be able to recover these funds.We have documented this risk and encourage users to take advantage of our CrossDomainMessenger contracts which provide additional safety measures.
 
-*Deposit grieffing by filling up the MAX_RESOURCE_LIMIT
+*Deposit griefing by filling up the MAX_RESOURCE_LIMIT
 
 This issue is mitigated by PR 5064, which does not completely
-resolve the issue but does increase the cost of a sustained grieffing attack.
+resolve the issue but does increase the cost of a sustained griefing attack.
 A more complete fix will require architectural changes.
 
 *There are various 'foot guns' in the bridge which may arise from misconfiguring a token. Examples include:
