@@ -94,9 +94,33 @@ You can see these contracts deployed on testnet here : <https://docs.base.org/ne
 
 - Legacy code that doesn't affect bedrock.*
 
+# Roles
+
+The following table outlines all the roles and their permissions in the system
+
+| Role | Capability |
+| --- | --- |
+| L2 ProxyAdmin Owner | Can instantly upgrade all L2 contracts. |
+| L1 ProxyAdmin Owner | Can instantly upgrade all L1 contracts. |
+| Challenger | Can call `deleteL2Outputs()` in the event of fault. |
+| MSD Controller | Controls the Migration SystemDictator contract. |
+| System Config Owner | Can modify system config values. |
+| Proposer | Can propose new L2 Outputs. |
+| Sequencer | Can submit new transaction batches. |
+| Guardian | Can pause and unpause the Portal. |
+
+
+# Previous audits
+https://github.com/ethereum-optimism/optimism/tree/develop/technical-documents/security-reviews
+
+https://github.com/sherlock-audit/2023-03-optimism-judging
+
+https://github.com/sherlock-audit/2023-01-optimism-judging
+
+
 # Known Issues
 
-*Previously known and documented risks will not be will not be accepted as valid findings.
+*Previously known and documented risks will not be will not be accepted as valid findings. Please refer to previous audits, known issues, OP Spec and Assumptions and Roadmap features.
 
 *There is an edge case in which ETH deposited to the OptimismPortal by a contract can be irrecoverably stranded:
 
@@ -116,6 +140,14 @@ To minimize complexity our bridge design does not try to prevent all forms of de
 
 *When running in non-archive mode op-geth has difficulty executing deep reorgs. We are working on a fix.
 
+# Assumptions & Roadmap features
+    * Sequencer is centralized atm
+    * Users cannot propose L2 blocks atm
+    * No fault proofs atm
+    * Contracts are upgradable
+    * Proposer is assumed to always propose correct l2 values
+    * Challenger is assumed to challenge only in case of a fault
+    * Guardian is assumed to only pause if necessary, not for greifing other users
 
 
 # Build & Tests
