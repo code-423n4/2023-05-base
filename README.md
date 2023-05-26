@@ -117,6 +117,15 @@ https://github.com/sherlock-audit/2023-03-optimism-judging
 
 https://github.com/sherlock-audit/2023-01-optimism-judging
 
+# Assumptions & Roadmap features
+    * Sequencer is centralized at the moment
+    * Users cannot propose L2 blocks at the moment
+    * No fault proofs at the moment
+    * Contracts are upgradable
+    * Proposer is assumed to always propose correct l2 values
+    * Challenger is assumed to challenge only in case of a fault
+    * Guardian is assumed to only pause if necessary, not for greifing other users
+    * Batcher  is assumed to always propose correct batches
 
 # Known Issues
 
@@ -139,16 +148,6 @@ Tokens which dynamically alter the amount of a token held by an account, such as
 To minimize complexity our bridge design does not try to prevent all forms of developer and user error.
 
 *When running in non-archive mode op-geth has difficulty executing deep reorgs. We are working on a fix.
-
-# Assumptions & Roadmap features
-    * Sequencer is centralized at the moment
-    * Users cannot propose L2 blocks at the moment
-    * No fault proofs at the moment
-    * Contracts are upgradable
-    * Proposer is assumed to always propose correct l2 values
-    * Challenger is assumed to challenge only in case of a fault
-    * Guardian is assumed to only pause if necessary, not for greifing other users
-
 
 # Build & Tests
 
