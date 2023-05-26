@@ -141,9 +141,9 @@ To minimize complexity our bridge design does not try to prevent all forms of de
 *When running in non-archive mode op-geth has difficulty executing deep reorgs. We are working on a fix.
 
 # Assumptions & Roadmap features
-    * Sequencer is centralized atm
-    * Users cannot propose L2 blocks atm
-    * No fault proofs atm
+    * Sequencer is centralized at the moment
+    * Users cannot propose L2 blocks at the moment
+    * No fault proofs at the moment
     * Contracts are upgradable
     * Proposer is assumed to always propose correct l2 values
     * Challenger is assumed to challenge only in case of a fault
