@@ -1,0 +1,959 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q2-2023 / base-may26
+==============================================================
+
+[05/18/2023 18:59] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the $100,000 USDC **BASE** audit!
+
+📆 Audit opens 05/26/2023 20:00 (20:00 UTC) and runs through 06/09/2023 20:00 (20:00 UTC) (14 days).
+
+Please give a warm welcome to the BASE team, particularly @pwnfooo and @the-lichking, who will be available for questions either here in the channel or via DM in the **UTC+2 timezone(s)**.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-05-base
+
+{Embed}
+https://code4rena.com/contests/2023-05-base
+Code4rena BASE
+$100,000 USDC
+26 May 2023—9 June 2023
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/c4-og-banner-0FCFA.png
+
+{Reactions}
+💙 (12) 
+
+[05/18/2023 19:01] kartoonjoy
+Pinned a message.
+
+
+[05/18/2023 19:01] kartoonjoy
+Let's please limit conversation until the audit begins. Thanks!
+
+
+[05/18/2023 21:55] kartoonjoy (pinned)
+@🐺wardens  
+
+**IMPORTANT NOTE:** Prior to receiving payment from this audit you MUST become a Certified Warden (successfully complete KYC). You do not have to complete this process before competing or submitting bugs. You must have started this process within 48 hours after the audit ends, i.e. **by June 11, 2023 at 20:00 UTC in order to receive payment.**
+
+{Reactions}
+👍 (23) 
+
+[05/18/2023 21:55] kartoonjoy
+Pinned a message.
+
+
+[05/18/2023 21:56] kartoonjoy
+Let's please limit conversation until the audit begins. Thanks!
+
+{Reactions}
+✅ (2) 
+
+[05/19/2023 12:39] kartoonjoy
+Hey @🐺wardens our apologies, but the BASE audit will be delayed until next week. This might be a great time to get KYC'd if you haven't already, and plan to participate.
+
+https://docs.code4rena.com/roles/certified-contributors
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors
+Certified contributors
+In order to create opportunities for contributions which rely on establishment of trust, Code4rena allows community members to opt into certifying their identity and entering into a simple agreement.
+
+{Reactions}
+4739_Skeletor (13) 🎉 (10) 
+
+[05/19/2023 12:40] bytes032
+phew
+
+
+[05/19/2023 12:40] bytes032
+in in a midle of a solo audit and i was like - damn, i wouldnt be able to participate!
+
+{Reactions}
+🎉 (10) 
+
+[05/19/2023 12:40] bytes032
+thank you! 😄
+
+{Reactions}
+hi5 (7) 😅 (6) 
+
+[05/19/2023 12:41] 0xhacksmithh
+will this be a public contest, and what do you mean by KYC completion, is there any new feature introduced.
+
+
+[05/19/2023 12:42] whiteoakkong
+https://discord.com/channels/810916927919620096/1108827694818410506/1108875616301883512
+
+{Reactions}
+thankyou 
+
+[05/19/2023 12:43] kartoonjoy
+This is a public audit however, in order to receive payment, you must become certified (KYC'd). If you have any additional questions, take a look at the information above.
+
+
+[05/19/2023 14:04] kartoonjoy (pinned)
+Also, please note: there will be no bot race or analyzer tool run for this audit.
+
+{Reactions}
+✅ (3) 
+
+[05/19/2023 14:04] kartoonjoy
+Pinned a message.
+
+
+[05/19/2023 19:42] 0xepley
+if someone won reward but don't have KYC will they lost the reward or it will be on hold untill they do KYC
+
+{Reactions}
+💯 
+
+[05/19/2023 19:48] kartoonjoy
+📢 Let's please limit conversation until the audit begins. Thanks!
+
+{Reactions}
+✅ (3) 
+
+[05/24/2023 18:17] kartoonjoy
+Hey @🐺wardens our apologies, but the BASE audit will be delayed a couple days. This might be a great time to get KYC'd if you haven't already, and plan to participate.
+
+https://docs.code4rena.com/roles/certified-contributors
+
+{Embed}
+https://docs.code4rena.com/roles/certified-contributors
+Certified contributors
+In order to create opportunities for contributions which rely on establishment of trust, Code4rena allows community members to opt into certifying their identity and entering into a simple agreement.
+
+{Reactions}
+😔 (19) 🫡 (10) ✅ (5) 🔥 (3) 👍🏻 (3) 
+
+[05/24/2023 18:18] kartoonjoy
+___
+📢 Let's limit conversation until the audit begins. Please direct any questions / comments to the #🐺wardens or #❓questions channels. Thanks!
+
+
+[05/26/2023 20:06] pwnfooo
+Hi guys,
+
+We are Live ! I will be hanging out in the discord the next few weeks.  We @the-lichking , @pwnfooo  are happy to answer any technical questions during this review 🙂 
+    
+https://code4rena.com/contests/2023-05-base#top
+
+{Embed}
+https://code4rena.com/contests/2023-05-base
+Code4rena
+Code4rena is a competitive audit platform that finds more high-severity vulnerabilities, more quickly than any other auditing method.
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/c4-og-banner-3E5BC.png
+
+{Reactions}
+👋 yay (2) hi5 (2) 
+
+[05/26/2023 20:06] 0xkazimm
+hello, who can we dm in this contest ?!
+
+
+[05/26/2023 20:08] pwnfooo
+It this is a technical question , I can help
+
+{Reactions}
+👍🏻 
+
+[05/26/2023 20:08] 0xkazimm
+thanks, i was asking if the contracts is the same thing with zero change compare to the optimism contest on sherlock ?!
+
+
+[05/26/2023 20:09] pwnfooo
+The OP repo does have minimal changes after the audit contest. You can see that from the PR's made to the repo 🙂
+
+{Reactions}
+👍🏻 (2) 
+
+[05/26/2023 20:13] pwnfooo (pinned)
+Do note that we also have Op-Geth and OP-node components in scope of this audit, not just the smart contracts. Happy hacking !
+
+{Reactions}
+👍 (3) 
+
+[05/26/2023 20:15] kartoonjoy
+Pinned a message.
+
+
+[05/26/2023 20:26] pwnfooo
+Started a thread.
+
+
+[05/26/2023 23:50] popular
+Hi there - is there anything BASE-specific in this competition? or just the OP repo?
+
+
+[05/27/2023 00:47] pwnfooo
+Base is based on OP stack ,  we are a core contributor to OP Stack and these changes / features are  included in the scope of this audit.
+
+{Reactions}
+👍 (2) 
+
+[05/27/2023 07:01] 0xumarkhatab
+Hi there , do we have any Automated Findings for this audit ?
+
+
+[05/27/2023 07:48] cloudellie
+No bot race / automated findings for this audit - but recommend reading the known findings outlined in the repo, along with past audit reports.
+
+
+[05/27/2023 08:20] 0xumarkhatab
+Ahan !
+Got it .
+Thank you man
+
+
+[05/27/2023 08:32] raihan3727
+@kartoonjoy 
+sir i have national Identification card but i don't have passport.
+
+I did participate some contests but i got one gas award from frankecoin contest.
+
+Could i verifiy my identity to  base-may26 contest.
+
+
+[05/27/2023 08:33] raihan3727
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/IMG-20230526-WA0006-B84D6.jpg
+
+
+[05/27/2023 08:45] 0xnirlin
+best if you ask this in #❓questions
+
+{Reactions}
+thankyou (3) 
+
+[05/27/2023 08:55] raihan3727
+@nirlin Thanks sir
+
+
+[05/27/2023 12:06] 0x73696d616f
+@pwnfooo dmed
+
+{Reactions}
+🟢 
+
+[05/27/2023 22:07] 0x73696d616f
+@custom:legacy functions should be audited too right?
+
+
+[05/28/2023 00:09] h3cker
+anyone else getting node-gyp error trying to yarn install on mac?!
+
+
+[05/28/2023 01:10] pwnfooo
+Legacy functions are not in use, but if you can show that you could use them creatively to chain together a vulnerability on bedrock , then yes
+
+{Reactions}
+👍 
+
+[05/28/2023 01:11] pwnfooo
+I would recommend deploying a local bedrock testnet  and checking this
+
+{Reactions}
+👍 
+
+[05/28/2023 17:10] cryptothemex
+Prior to receiving payment from this audit you MUST become a Certified Warden.
+
+is KYC  compulsory for all audits now?
+
+
+[05/28/2023 19:21] 0x73696d616f
+trying to start a local hardhat node
+
+
+[05/28/2023 19:21] 0x73696d616f
+are there instructions? could only find for goerli
+
+
+[05/28/2023 19:40] 0x73696d616f
+tried this, but it's not working https://community.optimism.io/docs/developers/build/dev-node/#
+
+
+[05/28/2023 23:44] jauvany
+did I just see a whole lot of go contracts?
+
+
+[05/28/2023 23:46] jauvany
+Lordddddd Good luck to all
+
+{Reactions}
+😅 
+
+[05/29/2023 07:00] pwnfooo (pinned)
+Please try these instructions. Make sure you do this on a clean copy of the code 
+
+https://stack.optimism.io/docs/build/getting-started/
+
+{Embed}
+https://stack.optimism.io/docs/build/getting-started/
+Getting Started
+Overview Hello! This Getting Started guide is meant to help you kick off your OP Stack journey by taking you through the process of spinning up your very own OP Stack chain on the
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/twitter-logo-F3060.png
+
+{Reactions}
+👍 
+
+[05/30/2023 13:33] kartoonjoy
+Pinned a message.
+
+
+[05/30/2023 18:24] heuss
+Few people talking in this one
+
+
+[05/30/2023 19:36] evokid
+Indeed, Less competition
+
+
+[05/30/2023 19:57] datapunk
+trying to deploy the contracts, but got stuck on "Transferring ownership of the SystemDictator proxy...". `await SystemDictatorProxy.callStatic.admin({
+          from: ethers.constants.AddressZero,
+        })` always returns undefined
+
+Any idea? Thx
+
+
+[05/30/2023 20:36] 0x73696d616f
+happened to me too
+
+
+[05/30/2023 21:11] pwnfooo
+make sure you have enough eth in the deployer account
+
+
+[05/30/2023 21:11] pwnfooo
+you can also do a clean build of the contracts using hardhat
+
+
+[05/30/2023 21:14] pwnfooo
+make sure you follow these instructions https://stack.optimism.io/docs/build/getting-started/#deploy-the-l1-contracts
+
+
+[05/30/2023 21:32] datapunk
+I do have enough eth in deployer. Just did a npx hardhat clean, same result. Followed the instructions
+
+
+[05/30/2023 21:51] 0x73696d616f
+I am stuck now at WARNING: setting OptimismPortal.GUARDIAN to 0x09161a2c19d354e6c73b94e74508094feb5d7c96 and it has no code
+
+
+[05/30/2023 21:51] 0x73696d616f
+0x09161a2c19d354e6c73b94e74508094feb5d7c96 is the address I am using to deploy
+
+
+[05/30/2023 21:53] 0x73696d616f
+looks like it is intended 
+saw this error msg
+Do not deploy to production networks without the GUARDIAN being a contract
+
+
+[05/30/2023 22:07] 0x73696d616f
+It's stuck here, have no idea why
+```
+// Update the owner if necessary.
+  if (
+    (await SystemDictatorProxy.callStatic.admin({
+      from: ethers.constants.AddressZero,
+    })) !== hre.deployConfig.controller
+  ) {
+    console.log('Transferring ownership of the SystemDictator proxy...')
+
+    // Transfer ownership to the controller address.
+    await SystemDictatorProxyWithSigner.changeAdmin(hre.deployConfig.controller)
+
+    // Wait for the transaction to execute properly.
+    await awaitCondition(
+      async () => {
+        return (
+          (await SystemDictatorProxy.callStatic.admin({
+            from: ethers.constants.AddressZero,
+          })) === hre.deployConfig.controller
+        )
+      },
+      30000,
+      1000
+    )
+```
+
+
+[05/30/2023 22:09] 0x73696d616f
+think I found the solution https://github.com/ethereum-optimism/optimism/issues/5703
+
+{Embed}
+https://github.com/ethereum-optimism/optimism/issues/5703
+BUG: the .sample.env should have DISABLE_LIVE_DEPLOYER=false · Issu...
+Describe the bug A clear and concise description of what the bug is. The .sample.env in packages/bedrock-contracts/ folder should have DISABLE_LIVE_DEPLOYER=false instead of true. This is causing t...
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/5703-97070
+
+
+[05/30/2023 23:27] datapunk
+the solution is simply comment out the check? It does not solve the fact that `changeAdmin` will not take effect though
+
+
+[05/30/2023 23:29] 0x73696d616f
+don't know, I managed to deploy the contrats
+
+
+[05/30/2023 23:30] 0x73696d616f
+maybe it will cause problems later on
+
+
+[05/30/2023 23:42] 0x73696d616f
+getting  "failed to fetch runtime config data" when trying to run op-node
+
+
+[05/31/2023 16:19] pwnfooo
+When running op-node , make sure you initialize it correctly as described here https://stack.optimism.io/docs/build/getting-started/#op-node
+
+{Embed}
+https://stack.optimism.io/docs/build/getting-started/
+Getting Started
+Overview Hello! This Getting Started guide is meant to help you kick off your OP Stack journey by taking you through the process of spinning up your very own OP Stack chain on the
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/twitter-logo-F3060.png
+
+{Reactions}
+👍 
+
+[05/31/2023 20:02] itsmetechjay (pinned)
+ℹ️ FYI wardens, please note that there is an up to  $2mm open Immunefi bounty paired with this audit.  So there is additional incentive to submit findings earlier rather than later.
+
+
+[05/31/2023 20:02] itsmetechjay
+Pinned a message.
+
+
+[05/31/2023 20:26] illilli000
+how do the c4 findings interact with the immunefi bounty?
+
+
+[06/01/2023 01:26] jes5_c
+is everything also in scope for the immunefi one then? i don't think their "assets in scope" section includes the bedrock upgrades, maybe it needs to be updated. (sorry if this is off-topic!)
+
+
+[06/01/2023 01:36] itsmetechjay
+They don't interact - we just wanted to inform you. You would need to also submit findings to ImmuneFi in order to be eligible for those bounties.
+
+{Reactions}
+👍 (2) 
+
+[06/01/2023 01:37] itsmetechjay
+I am unable to speak to the scope of the Immunefi audit.
+
+
+[06/01/2023 02:15] jes5_c
+thanks i'll ask ovr there
+
+{Reactions}
+hi5 
+
+[06/01/2023 07:55] ryanranran
+did you manage to get past that? I'm seeing the same thing. Also tried --l1.trustrpc
+
+
+[06/01/2023 08:58] 0x73696d616f
+nope, I gave up
+
+
+[06/01/2023 19:25] pwnfooo (pinned)
+Hi wardens! 
+
+Wanted to share an update on this program: with the upcoming upgrade of Optimism to Bedrock, if you find a bug that’s relevant and in-scope for both @Code4rena’s audit and @OptimismFND’s @Immunefi’s bug bounty,  you can earn even more than our **$100k**  guaranteed:
+
+ Up to **+$50k**  for non-theft vectors
+** +$2m**  for loss of funds vectors
+
+If you want to learn more about the Optimism program, you can here: https://immunefi.com/bounty/optimism/. If you find a critical bug, please also submit it directly to the Optimism program to ensure that we can review, reward, and resolve it as soon as possible.
+We’re excited to be working closely with Optimism to secure the growing onchain ecosystem 🔴 🤝 🔵
+
+{Embed}
+https://immunefi.com/bounty/optimism/
+Optimism Bug Bounties | Immunefi
+Find bugs and vulnerabilities on Optimism and get paid up to $2,000,042.
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/49CFE
+
+{Reactions}
+🔥 (9) praisethesun (4) chefskiss (4) cheers_badger (3) 
+
+[06/01/2023 19:29] kartoonjoy
+Pinned a message.
+
+
+[06/06/2023 13:45] ladboy233
+@pwnfooo
+
+
+[06/06/2023 13:45] ladboy233
+Hi
+
+
+[06/06/2023 13:45] ladboy233
+https://code4rena.com/contests/2023-05-base#top
+
+{Embed}
+https://code4rena.com/contests/2023-05-base
+Code4rena
+Code4rena is a competitive audit platform that finds more high-severity vulnerabilities, more quickly than any other auditing method.
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/c4-og-banner-3E5BC.png
+
+
+[06/06/2023 13:46] ladboy233
+Can I please ask what is exact new feature / code was added after the previous auditing?
+
+
+[06/06/2023 13:46] ladboy233
+Also
+
+
+[06/06/2023 13:46] ladboy233
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/image-582C0.png
+
+
+[06/06/2023 13:46] ladboy233
+the op-geth does not lock commit hash, so which version of the op-geth should we audit?
+
+
+[06/06/2023 18:41] pwnfooo
+The best way to see what has changed is to look at the commit hash of the previous audit and do a diff.
+
+
+[06/07/2023 16:57] acegawd
+Is 3fa9e81, the  commit hash for op-geth to be audited? @pwnfooo
+
+{Reactions}
+10_10 
+
+[06/08/2023 05:23] pwnfooo
+@0xmint @0xladboy | Sparkware  3fa9e81 is the correct commit hash for op-geth. You can see it pinned here : https://github.com/code-423n4/2023-05-base
+
+{Embed}
+https://github.com/code-423n4/2023-05-base
+GitHub - code-423n4/2023-05-base
+Contribute to code-423n4/2023-05-base development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q2-2023 - base-may26 [1108827694818410506].txt_Files/fd58f7f1-c634-48c8-9994-5d8ad6ecaa3f-F8219
+
+{Reactions}
+👍 
+
+[06/09/2023 05:54] acegawd
+DM @pwnfooo
+
+
+[06/09/2023 18:13] pwnfooo
+@0xmint  hi , i am traveling right now , @the-lichking  will get back to you on this
+
+{Reactions}
+👍 (2) 
+
+[06/09/2023 18:14] acegawd
+Hope so.
+
+
+[06/09/2023 20:00] c145h
+This is hard
+
+
+[06/09/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **BASE** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+⭐ (8) 😤 (3) ❤️ (4) 🫡 (4) chefskiss (2) 
+
+[07/17/2023 12:20] ladboy233
+😭😭😭:
+
+
+[07/18/2023 19:04] jauvany
+I got a hint already, thanks for the feature on my profile 🧑‍🎓🙏
+
+
+[07/19/2023 21:34] liveactionllamac4
+🤑 🎉  Awards for **BASE**:
+
+$10,437.90 USDC » @rbserver  
+$8,029.15 USDC » @0xhacksmithh 
+$8,029.15 USDC » @Bauchibred  
+$8,029.15 USDC » @Rolezn  
+$8,029.15 USDC » @VictoryGod  
+$8,029.15 USDC » @Alex The Entreprenerd  
+$8,029.15 USDC » @0xladboy | Sparkware 
+$8,029.15 USDC » @shealtielanz 
+$813.40 USDC » @souilos  
+$813.40 USDC » @Sathish9098  
+$813.40 USDC » @trysam2003  
+$813.40 USDC » @SanketKogekar  
+$813.40 USDC » @0x73696d616f  
+$813.40 USDC » @MohammedRizwan  
+$813.40 USDC » @nadin 
+$813.40 USDC » @@jauvany 
+$813.40 USDC » @Madalad  
+$813.40 USDC » @SAAJ  
+$813.40 USDC » @kaveyjoe  
+$813.40 USDC » @codeslide 
+$813.40 USDC » @0xTheC0der  
+$813.40 USDC » @NiSeR 
+$813.40 USDC » @descharre 
+$813.40 USDC » @0xdeadbeef0x 
+$813.40 USDC » @btk 
+$813.40 USDC » @yongskiws  
+$813.40 USDC » @KKat7531  
+$813.40 USDC » @brgltd
+
+🏁 Findings summary
+-----------------------------------------
+High risk findings: 0
+Med risk findings: 0
+QA reports: 28
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🔥 (13) goose (5) 🙏 (5) 
+
+[07/19/2023 21:36] 0xkazimm
+wow zero HM, its first time to see this on code4, good work wardens :chefskiss:
+
+
+[07/19/2023 21:37] auditsea
+So in this case, rewards are only distributed based on QA reports?
+
+
+[07/19/2023 21:37] 0xkazimm
+i think so !
+
+
+[07/19/2023 21:38] auditsea
+Not a good idea
+
+
+[07/19/2023 21:39] eme0242
+10k for qa😀
+congrats guys
+
+
+[07/19/2023 21:39] auditsea
+Unfair for bots lol, they find low issues, receiving less than qa reports
+
+
+[07/19/2023 21:40] aba1842
+was this the first no H/M project on C4?
+
+
+[07/19/2023 21:40] madalad
+thinks its happened once before but i forget which
+
+
+[07/19/2023 21:42] 0xkazimm
+for me yes 🫠
+
+
+[07/19/2023 21:42] aba1842
+interesting, there should be a hall of fame for these, next to the Gitcoin one 😄
+
+
+[07/19/2023 21:44] favelanky
+No botrace for this one
+
+
+[07/19/2023 21:45] auditsea
+So they knew there won't be any HM lol
+
+
+[07/19/2023 21:49] ladboy233
+lol
+
+
+[07/19/2023 21:54] shealtielanz
+God is Good
+
+{Reactions}
+🔥 (5) 
+
+[07/19/2023 22:03] shealtielanz
+Thank you so much code4rena, all my life I never thought of this
+
+
+[07/19/2023 22:03] shealtielanz
+I just read some books and asked alot of people questions but I never knew it would be thus massive
+
+
+[07/19/2023 22:03] shealtielanz
+😭😭😭😭😭😭😭😭😭😭😭😭😭😭😭 this is so much
+
+{Reactions}
+😅 (8) praisethesun (5) 💜 
+
+[07/19/2023 22:04] shealtielanz
+I was expecting like 200 max
+
+
+[07/19/2023 22:04] shealtielanz
+My life  has change wtf
+
+
+[07/19/2023 22:04] shealtielanz
+😭😭😭😭😭😭😭😭😭😭😭😭
+
+
+[07/19/2023 22:04] shealtielanz
+8k from where from what
+
+
+[07/19/2023 22:04] shealtielanz
+reporting a bug. 😭😭😭😭😭😭
+
+
+[07/19/2023 22:05] shealtielanz
+Thank you so much
+
+{Reactions}
+💜 (34) ➕ (2) 
+
+[07/19/2023 22:28] dadekuma
+Wow, I regret not participating on this one, congrats to all 🙌
+
+
+[07/19/2023 22:43] ladboy233
+I thought I found a medium that can take…
+
+
+[07/19/2023 22:43] ladboy233
+I always have unrealistic expectation
+
+
+[07/19/2023 22:43] thetechnofeak
+Remember me bro, now I want you to teach me 😂
+
+{Reactions}
+😅 
+
+[07/19/2023 23:00] shealtielanz
+yessir hehehe.😅
+
+
+[07/19/2023 23:01] shealtielanz
+I wish I got one too, but Thankfully I was still lucky 
+The Developers actually did a good one on this codebase.⚡️✅️
+
+
+[07/19/2023 23:07] kitkat7531
+Congrats to everyone 👏👏🫡
+
+
+[07/20/2023 00:04] thetechnofeak
+what do u mean 'i got one too" you got it right?
+
+
+[07/20/2023 00:05] thetechnofeak
+all these high payouts yet no medium or high findings how??
+
+
+[07/20/2023 00:07] thetechnofeak
+so how do these QA things work ??
+
+
+[07/20/2023 00:55] 0xrizwan
+Congratulations Everyone. 🎉 🎉
+
+
+[07/20/2023 01:20] Hama#9496
+Really same, was the contest that secure or there d be a mistake in the judging?
+
+
+[07/20/2023 01:22] ladboy233
+I write a book during the post judging QA period lol
+
+
+[07/20/2023 01:23] ladboy233
+I think the sponsor and judge did thoroughly review the issue
+
+
+[07/20/2023 01:23] ladboy233
+and the judge takes extensively feedback
+
+
+[07/20/2023 01:23] ladboy233
+the judge is 0xLeastWood
+
+
+[07/20/2023 01:23] ladboy233
+the lead senior researcher in spearbitDAO, so I did repect his judgement and authority
+
+
+[07/20/2023 01:23] ladboy233
+So I think the contest is secure and very unlikely a mistake
+
+
+[07/20/2023 02:08] victorygod
+😄 🫶  Thats really awesome, I came in top 5 first time , thanks a lot
+
+{Reactions}
+🫡 (2) 
+
+[07/20/2023 03:08] 0xstalin
+I didn't participate in this one, but looks like from now on I'm not gonna ignore the Gas Optimizations and Q/As 🙂
+
+
+[07/20/2023 04:05] dwward3n
+Good one haha, always be prepared!
+
+
+[07/20/2023 04:51] 0xhacksmithh
+Omgggg
+
+
+[07/20/2023 04:53] coffiasd
+Not participating this one 🥹🥹
+
+
+[07/20/2023 07:08] dwward3n
+Did your medium become QA which got you 8k? Very interested to see the report
+
+
+[07/20/2023 07:12] dwward3n
+Was it about contacts or golang code?
+
+
+[07/20/2023 08:52] thetechnofeak
+what are QA reports, are they different from high /mediums
+
+
+[07/20/2023 09:26] ihtishamsudo
+A summary report of Low And Non Critical issues
+
+
+[07/20/2023 09:42] thetechnofeak
+ohhh where can i read the past reports of these ?? available on code4ren?
+
+
+[07/20/2023 09:43] ihtishamsudo
+go to code4rena homepage there will be past reports
+
+
+[07/20/2023 09:46] ladboy233
+if not QA then 80K lol, no but it is ok
+
+
+[07/20/2023 09:47] ladboy233
+It is natural to think our own finding is right, but need to see and learn from other perspective
+
+{Reactions}
+hi5 (2) 
+
+[07/20/2023 12:09] samsonoludare
+Thank God and thank you.
+
+{Reactions}
+💯 
+
+[07/20/2023 14:10] dwward3n
+Quality assurance?
+
+
+[07/21/2023 14:30] cryptphi
+he's a great guy
+
+{Reactions}
+🫡 (2) 
+
+[07/21/2023 14:41] ladboy233
+yes he is
+
+
+[07/25/2023 07:05] 0xhacksmithh
+Is reward for this contest send??
+
+
+[07/25/2023 12:20] xyzbtchunt
+@🦖 eric (ninek) | C4
+
+
+[07/25/2023 13:04] itsmetechjay
+Awards have not been sent out yet. @0xhacksmithh @xyzbtchunt
+
+{Reactions}
+🫡 (6) 
+
+[07/27/2023 13:48] ladboy233
+when send reward?
+
+{Reactions}
+🤣 (5) 🙏 (3) 
+
+[07/28/2023 00:19] xyzbtchunt
+is there any update for this?
+
+{Reactions}
+🙏 (4) 
+
+[07/28/2023 09:16] 0xdice91
+What's going on with the rewards .....why hasn't it been sent yet??
+
+{Reactions}
+😭 (2) 
+
+[07/28/2023 09:20] shealtielanz
+🙏🏻
+
+
+[07/28/2023 10:25] xyzbtchunt
+I think 2 more people haven't kyc yet
+
+
+[07/28/2023 12:41] shealtielanz
+Is that why it hasn't been sent?
+
+
+[07/28/2023 12:44] shealtielanz
+3 aren't certified yet.
+
+
+[07/28/2023 12:49] kaveyjoe
+2
+
+
+[07/28/2023 12:51] shealtielanz
+yh you're right
+
+
+[07/28/2023 14:04] judeabara
+Please where can we see the findings report?
+
+
+[07/28/2023 14:16] judeabara
+Oh oh okay report is not yet made public...
+
+Im waiting patiently to see the comment on my submission
+
+
+[07/28/2023 21:39] victorygod
+I think it's over a week | while written that awards to be distributed within a week
+
+Is there any issue?
+
+
+[07/28/2023 22:11] liveactionllamac4
+There was an error on my part with handing this off for distribution. It has been corrected now and awards should be sent in the next couple of business days (to those who have finished the certification process). So very sorry for the delay! 🙏
+
+{Reactions}
+empathy (8) 💜 (10) C4Keycap (5) thankyou (2) 
+
+==============================================================
+Exported 170 message(s)
+==============================================================
